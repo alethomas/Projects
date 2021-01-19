@@ -1,0 +1,26 @@
+SAMPLES=["1", "2"]
+
+rule all:
+    input:
+        #query = expand("data/query{no}.fasta", no=SAMPLES),
+        query = "query0.fasta_blast.out"
+    shell:
+        "echo DONE"
+
+rule makeblastdb:
+    input:
+        db = "swissprot"
+    output:
+        "swissprot_db.phr"
+    shell: 
+        "makeblastdb -in {input.db} -out {input.db}_db -dbtype prot"
+
+rule blastp:
+    input:
+        #query = expand("data/query{no}.fasta", no=SAMPLES),
+        query = "query0.fasta",
+        db = "swissprot_db.phr"
+    output:
+        "query0.fasta_blast.out"
+    shell:
+        "blastp -query {input.query} -db swissprot_db -out {input.query}_blast.out -evalue 1e-5 -outfmt 6"

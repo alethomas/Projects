@@ -1,0 +1,16 @@
+FROM ubuntu:latest
+
+WORKDIR /data
+
+# installieren mit apt-get install ncbi-blast+
+
+RUN curl https://ftp.ncbi.nlm.nih.gov/blast/executables/LATEST/ncbi-blast-2.11.0+-x64-linux.tar.gz \
+    |tar zxp
+
+# RUN export PATH=$PATH:$HOME/data/ncbi-blast-2.11.0+/bin
+# lieber die Daten mounten mit -v
+RUN curl --remote-name --remote-time https://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/swissprot.gz
+
+RUN gunzip -d /data/swissprot.gz && chmod 755 swissprot && echo UNZIPPED
+# makeblastdb im container
+RUN snakemake --cores all query0.fasta_blast.out

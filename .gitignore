@@ -1,0 +1,15 @@
+Docker_Training/Docker_Snakemake_BLAST/data/swissprot_db.phr
+Docker_Training/Docker_Snakemake_BLAST/data/swissprot
+Docker_Training/Docker_Snakemake_BLAST/data/swissprot_db.pin
+trinity_container/insignis_all_raw_L.fq.gz
+trinity_container/trinity_out_dir/insilico_read_normalization/tmp_normalized_reads/right.fa
+Docker_Training/Docker_Snakemake_BLAST/data/query0.fasta
+Docker_Training/Docker_Snakemake_BLAST/data/query0.fasta_blast.out
+Docker_Training/Docker_Snakemake_BLAST/data/swissprot_db.psq
+Docker_Training/Docker_Snakemake_BLAST/data/.snakemake/log/2021-01-16T121452.006921.snakemake.log
+Docker_Training/Docker_Snakemake_BLAST/data/.snakemake/metadata/c3dpc3Nwcm90X2RiLnBocg==
+Docker_Training/Docker_Snakemake_BLAST/data/.snakemake/metadata/cXVlcnkwLmZhc3RhX2JsYXN0Lm91dA==
+trinity_container/insignis_all_raw_R.fq.gz
+trinity_container/trinity_out_dir/Trinity.timing
+trinity_container/trinity_out_dir/insilico_read_normalization/tmp_normalized_reads/left.fa
+Docker_Training/Docker_Snakemake_BLAST/__init__.py
