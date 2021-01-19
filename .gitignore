@@ -13,3 +13,4 @@ trinity_container/insignis_all_raw_R.fq.gz
 trinity_container/trinity_out_dir/Trinity.timing
 trinity_container/trinity_out_dir/insilico_read_normalization/tmp_normalized_reads/left.fa
 Docker_Training/Docker_Snakemake_BLAST/__init__.py
+Test.code-workspace
