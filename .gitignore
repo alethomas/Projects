@@ -18,3 +18,8 @@ Test.code-workspace
 Docker_Training/.DS_Store
 Docker_Training/Docker_Snakemake_BLAST/.DS_Store
 Docker_Training/Docker_Snakemake_BLAST/data/uniprot_sprot.dat
+Docker_Training/Docker_Snakemake_BLAST/data/.snakemake/log/2021-01-20T101013.738275.snakemake.log
+.gitignore
+Docker_Training/Docker_Snakemake_BLAST/data/.snakemake/log/2021-01-20T101050.751657.snakemake.log
+Docker_Training/Docker_Snakemake_BLAST/data/query0.fasta_blast_w_kegg.out
+Docker_Training/Docker_Snakemake_BLAST/data/uniprot_sprot.dat2

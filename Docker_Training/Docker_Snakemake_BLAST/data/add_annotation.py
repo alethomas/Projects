@@ -4,7 +4,7 @@ import pprint
 
 folder = "/Users/alex/Projects/Projects/Docker_Training/Docker_Snakemake_BLAST/data/"
 
-infile = open(folder + "uniprot_sprot.dat")
+infile = open(folder + "uniprot_sprot.dat2")
 
 AC2KEGG = {}
 
@@ -19,14 +19,22 @@ for line in infile.read().splitlines():
         else:
             AC2KEGG[AC] = [Accession]
 
-# for key in AC2KEGG:
-#     print(key + "\t" + AC2KEGG[key])
+infile.close()
 
-print(len(AC2KEGG))
-for k in AC2KEGG.keys():
-    try:
-        if len(AC2KEGG[k])<1:
-            del AC2KEGG[k]
-    except: pass
-print(len(AC2KEGG))
+infile = open(folder + "query0.fasta_blast.out")
+outfile = open(folder + "query0.fasta_blast_w_kegg.out", "w")
+for line in infile.read().splitlines():
+    outfile.write(line)
+    if AC2KEGG.get(line.split("\t")[1][:-2] + ";"):
+        print("yes1")
+        outfile.write("\t" + str(AC2KEGG[line.split("\t")[1][:-2] + ";"]) + "\n")
+    else:
+        print("yes2")
+        outfile.write("\n")
+    
+infile.close()
+outfile.close()
+
+for key in AC2KEGG:
+    print(key + "\t" + str(AC2KEGG[key]))
 # pprint.pprint(AC2KEGG)
