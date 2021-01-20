@@ -2,7 +2,7 @@
 
 import pprint
 
-folder = "/Users/alex/Projects/Docker_Training/Docker_Snakemake_BLAST/data/"
+folder = "/Users/alex/Projects/Projects/Docker_Training/Docker_Snakemake_BLAST/data/"
 
 infile = open(folder + "uniprot_sprot.dat")
 
@@ -21,4 +21,12 @@ for line in infile.read().splitlines():
 
 # for key in AC2KEGG:
 #     print(key + "\t" + AC2KEGG[key])
-pprint.pprint(AC2KEGG)
+
+print(len(AC2KEGG))
+for k in AC2KEGG.keys():
+    try:
+        if len(AC2KEGG[k])<1:
+            del AC2KEGG[k]
+    except: pass
+print(len(AC2KEGG))
+# pprint.pprint(AC2KEGG)
